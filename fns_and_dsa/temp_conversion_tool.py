@@ -1,8 +1,8 @@
 # temp_conversion_tool.py
 
-# Define Global Conversion Factors
+# Define Global Conversion Factors (exact format required)
 FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
-CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5  # Exact required format
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5  # Must be this exact line, no changes
 FAHRENHEIT_TO_CELSIUS_OFFSET = 32  # The offset used when converting from Fahrenheit to Celsius
 
 # Function to convert Fahrenheit to Celsius
