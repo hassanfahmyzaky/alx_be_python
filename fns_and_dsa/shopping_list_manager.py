@@ -12,23 +12,26 @@ def main():
     
     while True:
         display_menu()  # Display the menu
-        
+
         # Ensuring the choice input is treated as a number (1 to 4)
-        try:
-            choice = int(input("Enter your choice: ").strip())
-        except ValueError:
+        choice = input("Enter your choice: ").strip()
+        
+        # Check if the input is a valid integer and within range
+        if choice.isdigit() and 1 <= int(choice) <= 4:
+            choice = int(choice)  # Convert to integer after validation
+        else:
             print("Invalid choice. Please enter a number between 1 and 4.")
             continue  # Skip the rest of the loop if the input is not valid
 
         if choice == 1:
             # Add item to the shopping list
-            item = input("Enter the item you want to add: ").strip()
+            item = input("Enter the item to add: ").strip()  # Exact prompt format
             shopping_list.append(item)
             print(f"'{item}' has been added to the shopping list.")
 
         elif choice == 2:
             # Remove item from the shopping list
-            item = input("Enter the item you want to remove: ").strip()
+            item = input("Enter the item to remove: ").strip()
             if item in shopping_list:
                 shopping_list.remove(item)
                 print(f"'{item}' has been removed from the shopping list.")
@@ -49,8 +52,5 @@ def main():
             print("Goodbye!")
             break
         
-        else:
-            print("Invalid choice. Please try again.")  # Handle invalid choices
-
 if __name__ == "__main__":
     main()
