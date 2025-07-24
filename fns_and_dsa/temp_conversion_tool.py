@@ -1,6 +1,7 @@
 # Global conversion factors - NOTE THE EXACT SPELLING REQUIRED
 FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
 CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5  # Fixed spelling (was missing 'O' before)
+CELSIUS_TO_FAHRENHEIT_FACTOR\s*=\s*9\/5
 
 def convert_to_celsius(fahrenheit):
     """Convert Fahrenheit to Celsius using the global factor"""
